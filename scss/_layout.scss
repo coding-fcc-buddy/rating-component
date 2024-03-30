@@ -1,0 +1,137 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(217, 12%, 63%);
+    /* color: hsl(216, 12%, 54%); */
+
+    .card{
+        background-color: hsl(213, 19%, 18%);
+        width: 420px;
+        max-width: 90%;
+        padding: 25px;
+        border-radius: 30px;
+        opacity: 1;
+        // display: block;
+        visibility: visible;
+        height: auto;
+        transition: opacity 1.5s ease;
+        
+        &.hide{
+            // display: none;
+            opacity: 0;
+           visibility: hidden;
+           height: 0;
+        }
+    }
+
+    .rating{
+
+        img{
+            padding: 15px;
+            background-color: hsl(213, 19%, 21%);
+            border-radius: 50%;
+            margin-bottom: 30px;
+        }
+
+        h2{
+            color: hsl(0, 0%, 100%);
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        p{
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+        }
+
+        .numbers{
+            display: flex;
+            margin: 30px 0;
+
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                width: 50px;
+                background-color: hsl(213, 19%, 21%);
+                border-radius: 50%;
+                margin-right: 20px;
+                cursor: pointer;
+                transition: all 0.3s; /* Smooth transition for background-color and color changes */
+
+                &:hover {
+                    background-color: hsl(25, 97%, 53%);
+                    color: white;
+                }
+                &.temp-hover{
+                    background-color: hsl(217, 12%, 63%);
+                    color: white;
+                }
+                &.clicked{
+                    background-color: hsl(25, 97%, 43%);
+                    color: white;
+                    transform: scale(1.035);
+                }
+    
+            }
+        }
+
+        button{
+            display: block;
+            width: 100%;
+            background-color: hsl(25, 97%, 53%);
+            border: none;
+            border-radius: 30px;
+            padding: 15px 0;
+            color: hsl(0, 0%, 100%);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for background-color and color changes */
+
+            &:hover{
+                color: hsl(25, 97%, 53%);
+                background-color: hsl(0, 0%, 100%);
+            }
+        }
+    }
+
+    .thank_you{
+        text-align: center;
+
+        img{
+
+        }
+
+        button{
+            margin: 25px 0 30px;
+            color: hsl(25, 97%, 53%);
+            background-color: hsl(213, 19%, 21%);
+            border: none;
+            border-radius: 15px;
+            padding: 7px 15px;
+            letter-spacing: 1px;
+        }
+
+        h2{
+            color: hsl(0, 0%, 100%);
+        }
+
+        .appreciate{
+            margin: 20px 0 30px;
+
+            p{
+                // background-color: red;
+              
+            }
+        }
+
+       
+    }
+}
+  

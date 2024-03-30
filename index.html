@@ -13,37 +13,66 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
+  <div class="container center">
 
-  <!-- Rating state start -->
+    <!-- Rating state start -->
+    <div class="card rating ">
+      <img src="./images/icon-star.svg" alt="">
+      <h2> How did we do?</h2>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+      <div class="numbers">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+      </div>
+      <button>Submit</button>
+    </div>
+    <!-- Rating state end -->
 
-  How did we do?
+    <!-- Thank you state start -->
+    <div class="card thank_you center hide">
+      <img src="./images/illustration-thank-you.svg" alt="">
+      <button>You selected <span class="selected_rating"></span> out of 5</button>
+      <h2>Thank you!</h2>
+      <div class="appreciate">
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </div>
+    </div>
+    <!-- Thank you state end -->
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+    
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
 
-  1 2 3 4 5
+  </div><!--container-->
 
-  Submit
+  <script>
+    const numbers = document.querySelectorAll('.numbers span')
+    numbers.forEach(elem=>{
+      elem.addEventListener('click',function(){
+        numbers.forEach(elem=>{elem.classList.remove('clicked')})
+        elem.classList.add('clicked')
+        document.querySelector('.selected_rating').textContent=this.textContent
+      })
+    })  
+    numbers.forEach(elem=>{
+      elem.addEventListener('mouseout',function(){
+        elem.classList.add('temp-hover')
+        setTimeout(function(){
+          elem.classList.remove('temp-hover')
+        },300)
+      })
+    })
+    document.querySelector('.rating button').addEventListener('click', function(){
+      document.querySelector('.rating').classList.toggle('hide')
+      document.querySelector('.thank_you').classList.toggle('hide')
+    })
 
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </script>
 </body>
 </html>
