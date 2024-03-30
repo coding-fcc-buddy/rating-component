@@ -1,18 +1,27 @@
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --secondary: hsl(213deg, 20%, 22%);
+  }
 .container{
     width: 100vw;
     height: 100vh;
-    background-color: hsl(216, 12%, 8%);
-    color: hsl(217, 12%, 63%);
-    /* color: hsl(216, 12%, 54%); */
+    background-color: var(--Very-Dark-Blue);
+    color: var(--Light-Grey);
+    /* color: var(--Medium-Grey); */
 
     .card{
-        background-color: hsl(213, 19%, 18%);
+        background-color: var(--Dark-Blue);
         width: 420px;
         max-width: 90%;
         padding: 25px;
         border-radius: 30px;
-        opacity: 1;
         // display: block;
+        opacity: 1;
         visibility: visible;
         height: auto;
         transition: opacity 1.5s ease;
@@ -20,8 +29,8 @@
         &.hide{
             // display: none;
             opacity: 0;
-           visibility: hidden;
-           height: 0;
+            visibility: hidden;
+            height: 0;
         }
     }
 
@@ -35,7 +44,7 @@
         }
 
         h2{
-            color: hsl(0, 0%, 100%);
+            color: var(--White);
             margin-bottom: 20px;
             font-size: 32px;
             font-weight: 500;
@@ -63,11 +72,11 @@
                 transition: all 0.3s; /* Smooth transition for background-color and color changes */
 
                 &:hover {
-                    background-color: hsl(25, 97%, 53%);
+                    background-color: var(--Orange);
                     color: white;
                 }
                 &.temp-hover{
-                    background-color: hsl(217, 12%, 63%);
+                    background-color: var(--Light-Grey);
                     color: white;
                 }
                 &.clicked{
@@ -82,11 +91,11 @@
         button{
             display: block;
             width: 100%;
-            background-color: hsl(25, 97%, 53%);
+            background-color: var(--Orange);
             border: none;
             border-radius: 30px;
             padding: 15px 0;
-            color: hsl(0, 0%, 100%);
+            color: var(--White);
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 16px;
@@ -95,8 +104,8 @@
             transition: background-color 0.3s, color 0.3s; /* Smooth transition for background-color and color changes */
 
             &:hover{
-                color: hsl(25, 97%, 53%);
-                background-color: hsl(0, 0%, 100%);
+                color: var(--Orange);
+                background-color: var(--White);
             }
         }
     }
@@ -110,7 +119,7 @@
 
         button{
             margin: 25px 0 30px;
-            color: hsl(25, 97%, 53%);
+            color: var(--Orange);
             background-color: hsl(213, 19%, 21%);
             border: none;
             border-radius: 15px;
@@ -119,7 +128,7 @@
         }
 
         h2{
-            color: hsl(0, 0%, 100%);
+            color: var(--White);
         }
 
         .appreciate{
