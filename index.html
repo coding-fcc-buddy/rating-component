@@ -53,11 +53,12 @@
 
   <script>
     const numbers = document.querySelectorAll('.numbers span')
+    const rating = document.querySelector('.selected_rating')
     numbers.forEach(elem=>{
       elem.addEventListener('click',function(){
         numbers.forEach(elem=>{elem.classList.remove('clicked')})
         elem.classList.add('clicked')
-        document.querySelector('.selected_rating').textContent=this.textContent
+        rating.textContent=this.textContent
       })
     })  
     numbers.forEach(elem=>{
@@ -69,8 +70,12 @@
       })
     })
     document.querySelector('.rating button').addEventListener('click', function(){
-      document.querySelector('.rating').classList.toggle('hide')
-      document.querySelector('.thank_you').classList.toggle('hide')
+      if(rating.textContent){
+        document.querySelector('.rating').classList.toggle('hide')
+        document.querySelector('.thank_you').classList.toggle('hide')
+      }else{
+        alert('select a rating please!')
+      }
     })
 
   </script>
